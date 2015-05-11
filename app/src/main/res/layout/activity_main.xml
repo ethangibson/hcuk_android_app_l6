@@ -1,0 +1,58 @@
+<!-- For the slide out menu bar everything has to be wrapped in the "android.support.v4.widget.DrawerLayout" tag -->
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!-- Main activity layout imediately after the "android.support.v4.widget.DrawerLayout" tag -->
+
+    <android.support.v4.app.FragmentTabHost
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"/>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </android.support.v4.app.FragmentTabHost>
+
+
+
+<!-- After the main activity layout place the menu that we want to slide out -->
+
+    <LinearLayout
+        android:layout_width="275dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="#ffeeeeee"
+        android:orientation="vertical"
+        >
+<!-- Menu items, images, buttons go here! -->
+        <TextView
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|start"
+            android:background="#ffeeeeee"
+            android:text="Example Content"
+            />
+
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
